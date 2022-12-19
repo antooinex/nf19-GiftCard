@@ -1,6 +1,6 @@
 services:
   db:
-    antoinesan/image: db-nf19:0.1
+    image: antoinesan/db-nf19
     command: '--default-authentication-plugin=mysql_native_password'
     volumes:
       - db_data:/var/lib/mysql
@@ -15,7 +15,7 @@ services:
       - 33060
 
   wordpress:
-    antoinesan/wp-nf19:0.1
+    image: antoinesan/wp-nf19
     volumes:
       - wp_data:/var/www/html
     ports:
